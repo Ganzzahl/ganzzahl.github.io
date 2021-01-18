@@ -63,15 +63,15 @@ let guesses = 0;
 let points = 0;
 
 function getName() {
-document.getElementById("newGame").style.display = "none";
-const rand = Math.floor(Math.random() * 2);
-const arr = rand === 0
-  ? aot
-  : football;
+    document.getElementById("newGame").style.display = "none";
+    const rand = Math.floor(Math.random() * 2);
+    const arr = rand === 0
+      ? aot
+      : football;
 
-const rand2 = Math.floor(Math.random() * arr.length);
-currentName = arr[rand2];
-return currentName;
+    const rand2 = Math.floor(Math.random() * arr.length);
+    currentName = arr[rand2];
+    return currentName;
 }
 
 function isFootballer() {
@@ -83,20 +83,20 @@ function isAoT() {
 }
 
 function isInArray(arr) {
-document.getElementById("newGame").style.display = "block";
-document.getElementById("aotButton").disabled = true;
-document.getElementById("footballButton").disabled = true;
+    document.getElementById("newGame").style.display = "block";
+    document.getElementById("aotButton").disabled = true;
+    document.getElementById("footballButton").disabled = true;
 
-guesses++;
-for (name of arr) {
-  if (name === currentName) {
-    points++;
-    document.getElementById("result").innerHTML = "CORRECT! " + points + " / " + guesses;
-    return true;
-  }
-}
-document.getElementById("result").innerHTML = "WRONG! " + points + " / " + guesses;
-return false;
+    guesses++;
+    for (name of arr) {
+      if (name === currentName) {
+        points++;
+        document.getElementById("result").innerHTML = "CORRECT! " + points + " / " + guesses;
+        return true;
+      }
+    }
+    document.getElementById("result").innerHTML = "WRONG! " + points + " / " + guesses;
+    return false;
 }
 
 function newGame() {
