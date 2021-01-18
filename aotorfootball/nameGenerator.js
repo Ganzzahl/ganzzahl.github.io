@@ -56,6 +56,8 @@ const football = [
 ];
 
 let currentName = "";
+let guesses = 0;
+let points = 0;
 
 function getName() {
 document.getElementById("newGame").style.display = "none";
@@ -70,26 +72,24 @@ return currentName;
 }
 
 function isFootballer() {
-if(isInArray(football)) {
-  document.getElementById("result").innerHTML = "CORRECT!";
-} else {
-  document.getElementById("result").innerHTML = "WRONG!";
-}
+    isInArray(football);
 }
 
 function isAoT() {
-if(isInArray(aot)) {
-  document.getElementById("result").innerHTML = "CORRECT!";
-} else {
-  document.getElementById("result").innerHTML = "WRONG!";
-}
+    isInArray(aot);
 }
 
 function isInArray(arr) {
 document.getElementById("newGame").style.display = "block";
+guesses++;
 for (name of arr) {
-  if (name === currentName) return true;
+  if (name === currentName) {
+    points++;
+    document.getElementById("result").innerHTML = "CORRECT! " + points + " / " + guesses;
+    return true;
+  }
 }
+document.getElementById("result").innerHTML = "WRONG! " + points + " / " + guesses;
 return false;
 }
 
