@@ -95,3 +95,8 @@ document.getElementById("name").innerHTML = getName();
 document.getElementById("result").innerHTML = "";
 document.getElementById("newGame").style.display = "none";
 }
+
+document.getElementById("name").innerHTML = getName();
+document.getElementById("aotButton").addEventListener('click', isAoT, true);
+document.getElementById("footballButton").addEventListener('click', isFootballer, true);
+document.getElementById("newGame").addEventListener('click', newGame, true);
