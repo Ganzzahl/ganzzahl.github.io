@@ -49,7 +49,10 @@ const football = [
 "Peter Dietrich",
 "Keven Schlotterbeck",
 "David Raum",
-"Luca Waldschmidt"
+"Luca Waldschmidt",
+"Christian Guenter",
+"Soeren Gonther",
+"Reiner Geyer"
 ];
 
 let currentName = "";
