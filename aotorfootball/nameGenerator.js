@@ -81,6 +81,9 @@ function isAoT() {
 
 function isInArray(arr) {
 document.getElementById("newGame").style.display = "block";
+document.getElementById("aotButton").disabled = true;
+document.getElementById("footballButton").disabled = true;
+
 guesses++;
 for (name of arr) {
   if (name === currentName) {
@@ -97,6 +100,8 @@ function newGame() {
 document.getElementById("name").innerHTML = getName();
 document.getElementById("result").innerHTML = "";
 document.getElementById("newGame").style.display = "none";
+document.getElementById("aotButton").disabled = false;
+document.getElementById("footballButton").disabled = false;
 }
 
 document.getElementById("name").innerHTML = getName();
