@@ -52,7 +52,10 @@ const football = [
 "Luca Waldschmidt",
 "Christian Guenter",
 "Soeren Gonther",
-"Reiner Geyer"
+"Reiner Geyer",
+"Fritz Walter",
+"Ulf Kirsten",
+"Paul Freier"
 ];
 
 let currentName = "";
