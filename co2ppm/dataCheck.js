@@ -68,7 +68,7 @@ function findEvents(lines) {
             .filter(line => line[0] !== "" && line[0] !== "year")
             .filter(line => new Date(line[0]+"-"+line[1]+"-"+line[2]) >= typed)
             .map(line => line[2] + "/" + line[1] + "/" + line[0] + ": " + line[3] + "<br>")
-            .join();
+            .join("");
     if (!timeline || timeline === "") return undefined;
     return "Stuff that happened since the given date:<br>" + timeline;
 }
